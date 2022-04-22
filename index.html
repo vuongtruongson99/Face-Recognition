@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920px">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Start first section-->
+    <div class="section-1 bg-cover">
+        <div class="container">
+            <div class="nav-container">
+                <div class="left">
+                    <img src="images/Logo.svg" alt="">
+                    <h2 class="logo">NeuroCap</h2>
+                </div>
+    
+                <div class="right">
+                    <nav class="menu-items">
+                        <a href="#">Видео</a>
+                        <a href="#">Загрузить фото</a>
+                        <a href="#">О команде</a>
+                        <a class="btn-nav dark" href="#">Контакты</a>
+                    </nav>
+    
+                    <div class="dark-switch active">
+                        <img src="images/dark-switch.svg" alt="">
+                    </div>
+    
+                    <div class="light-switch ">
+                        <img src="images/light-switch.svg" alt="">
+                    </div>
+                </div>
+            </div>
+    
+            <header class="hero-section">
+                <div class="left">
+                    <h1>Обнаружение эмоции вашего лица!</h1>
+                    <p class="sub-heading">
+                        Сайт оснащен нейросетью, с помощью которой можно определить эмоцию человека!
+                    </p>
+    
+                    <div class="buttons">
+                        <a href="#" class="btn-hero">Начать</a>
+                    </div>
+                </div>
+    
+                <div class="right">
+                    <img src="images/Right Main.png" alt="">
+                </div>
+            </header>
+        </div>
+    </div>
+    <!-- End first section-->
+
+    <!-- Start second section-->
+    <div class="section-2 bg-cover">
+        <div class="container d-flex flex-column justify-content-center">
+            <div class="row">
+                <h2>Определяем эмоции с помощью вашей камеры</h2>
+            </div>
+
+            <div class="row video">
+                <div class="col-8 outer align-self-center">
+                    <video autoplay="true" id="videoElement" class="camera"></video>
+                </div>
+
+                <div class="col-4 predict-video align-self-center"> 
+                    <div class="flex">
+                        <h3>Эмоция</h3>
+                        <div class="item">
+                            <div class="emoji">
+                                <img class="image" src="images/smile-icon.svg" alt="">
+                            </div>
+                            <div class="status">
+                                <p>Нейтральный</p>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 20%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="emoji">
+                                <img class="image" src="images/happy-icon.svg" alt="">
+                            </div>
+                            <div class="status">
+                                <p>Счастлиый</p>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 53%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="emoji">
+                                <img class="image" src="images/sad-icon.svg" alt="">
+                            </div>
+                            <div class="status">
+                                <p>Печальный</p>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 10%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="emoji">
+                                <img class="image" src="images/suprise-icon.svg" alt="">
+                            </div>
+                            <div class="status">
+                                <p>Удивление</p>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="emoji">
+                                <img class="image" src="images/fear-icon.svg" alt="">
+                            </div>
+                            <div class="status">
+                                <p>Страх</p>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 40%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="emoji">
+                                <img class="image" src="images/angry-icon.svg" alt="">
+                            </div>
+                            <div class="status">
+                                <p>Гнев</p>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 10%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End second section-->
+    
+    <div class="section-3 bg-cover">
+        <div class="container d-flex flex-column justify-content-center">
+            <div class="row">
+                <h3>Или вы можете загрузить фото ...!</h3>
+            </div>
+
+            <div class="row d-flex align-items-center">
+                <div class="col-2 predict-image">
+                    <div class="square">
+                        <div class="emoji">
+                            <div class="circle-wrap">
+                                <div class="circle">
+                                  <div class="mask full">
+                                    <div class="fill"></div>
+                                  </div>
+                                  <div class="mask half">
+                                    <div class="fill"></div>
+                                  </div>
+                                  <div class="inside-circle">
+                                      <img src="images/smile-icon.svg" alt="">
+                                  </div>
+                                </div>
+                            </div>
+                            <p>Нейтральный</p>
+                        </div>
+    
+                        <div class="emoji">
+                            <div class="circle-wrap">
+                                <div class="circle">
+                                  <div class="mask full">
+                                    <div class="fill"></div>
+                                  </div>
+                                  <div class="mask half">
+                                    <div class="fill"></div>
+                                  </div>
+                                  <div class="inside-circle">
+                                      <img src="images/sad-icon.svg" alt="">
+                                  </div>
+                                </div>
+                            </div>
+                            <p>Печальный</p>
+                        </div>
+    
+                        <div class="emoji">
+                            <div class="circle-wrap">
+                                <div class="circle">
+                                  <div class="mask full">
+                                    <div class="fill"></div>
+                                  </div>
+                                  <div class="mask half">
+                                    <div class="fill"></div>
+                                  </div>
+                                  <div class="inside-circle">
+                                      <img src="images/fear-icon.svg" alt="">
+                                  </div>
+                                </div>
+                            </div>
+                            <p>Страх</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-2 predict-image">
+                    <div class="square">
+                        <div class="emoji">
+                            <div class="circle-wrap">
+                                <div class="circle">
+                                  <div class="mask full">
+                                    <div class="fill"></div>
+                                  </div>
+                                  <div class="mask half">
+                                    <div class="fill"></div>
+                                  </div>
+                                  <div class="inside-circle">
+                                      <img src="images/happy-icon.svg" alt="">
+                                  </div>
+                                </div>
+                            </div>
+                            <p>Счастлиый</p>
+                        </div>
+    
+                        <div class="emoji">
+                            <div class="circle-wrap">
+                                <div class="circle">
+                                  <div class="mask full">
+                                    <div class="fill"></div>
+                                  </div>
+                                  <div class="mask half">
+                                    <div class="fill"></div>
+                                  </div>
+                                  <div class="inside-circle">
+                                      <img src="images/suprise-icon.svg" alt="">
+                                  </div>
+                                </div>
+                            </div>
+                            <p>Удивление</p>
+                        </div>
+    
+                        <div class="emoji">
+                            <div class="circle-wrap">
+                                <div class="circle">
+                                  <div class="mask full">
+                                    <div class="fill"></div>
+                                  </div>
+                                  <div class="mask half">
+                                    <div class="fill"></div>
+                                  </div>
+                                  <div class="inside-circle">
+                                      <img src="images/angry-icon.svg" alt="">
+                                  </div>
+                                </div>
+                            </div>
+                            <p>Гнев</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-8">
+                    <form action="/" method=post enctype=multipart/form-data>
+                        <div class="drop-zone">
+                            <!-- <label for="choose_file"> -->
+                                <input type="file" name="myfile" id="choose_file" class="drop-zone__input">
+                                <p class="drop-zone__prompt"><span>Добавить файл</span> или перетащить файл сюда </p>
+                            <!-- </label> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/cc865c9a75.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
