@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --body: rgba(1, 0, 105, 0.8);
+    --btn: rgba(119, 87, 241, 0.2);
+    --main-btn: #7757F1;
+    --bg-section: #ffff;
+    --bg-progress: #DBEAFF;
+    --bg-mail: rgba(38, 35, 92, 0.65);
+    --icon: #26235C;
+
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--body)
+}
+
+body.dark-mode {
+    --body: #FFFF;
+    --main-btn: rgba(255, 255, 255, 0.062);
+    --btn: rgba(238, 92, 223, 0.8);
+    --bg-section: rgba(255, 255, 255, 0.15);
+    --bg-progress: #DBEAFF;
+    --bg-mail: linear-gradient(100.35deg, #FFE300 -4.46%, #FA05A7 91.84%);
+
+    --icon: #FFFF;
+}

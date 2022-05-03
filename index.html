@@ -382,27 +382,42 @@
     <!-- End 4th section -->
 
     <!-- Start 5th section -->
-    <div class="section-5 bg-cover">
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <h1>Свяжитесь с нами, если у вас есть какие-либо проблемы</h1>
-                    <p>Мы всегда готовы услышать все предложения и ваш вклад. Если есть какие-либо проблемы, дайте нам знать, чтобы улучшить ваш сервис.</p>
-                </div>
-                <div class="col-6">
-                    <form action="#" method="post">
-                        <input type="text" placeholder="Ваша имя" name="" id="">
-                        <input type="email" placeholder="Электронная почта" name="" id="">
-                        <input type="text" placeholder="Телефон" name="" id="">
-                        <textarea placeholder="Сообщение" name=""></textarea>
-                        <input type="checkbox" value="policy" name="" id="policy" lass="form-check-input">
-                        <label for="policy" class="form-check-label">Я прочитал и принимаю политику конфиденциальности. </label>
-                        <button type="submit">Отправить сообщение</button>
-                    </form>
-                </div>
+    <!-- <div class="section-5 bg-cover">
+        <div class="envelope">
+            <div class="contact_form">
+                <span class="reset">x</span>
+                <form name="contact" action="POST" id="say_hi">
+                        <fieldset>
+        
+                        <section class="form_part">
+                        <label for="name" id="name_label">Name</label>
+                        <input type="text" name="name" id="name" size="30" value="" class="text-input" />
+                        
+                        </section>
+        
+                        <section class="form_part">	
+                        <label for="email" id="email_label">Email</label>
+                        <input type="text" name="email" id="email" size="30" value="" class="text-input" />
+                        
+                        </section>
+        
+                        <section class="form_part">	
+                        <label for="message" id="message_label">Message</label>
+                        <textarea class="message" name="message" id="message"></textarea>
+                        
+                        </section>
+                        
+                    </fieldset>
+                </form>
             </div>
+            <p class="contact_me">CONTACT</p>
+            <p class="send_me">SEND</p>
+            <p class="thanks">THANKS</p>
+            <span class="top_flap close_sesame"></span>
+            <span class="side_flaps"></span>
+            <span class="bottom_flap"></span>
         </div>
-    </div>
+    </div> -->
     <!-- End 5th section -->
 
     <footer class="footer">
@@ -436,11 +451,14 @@
         </ul>
         <p>&copy; 2022 Neuro Cap | All rights reserved. </p>
       </footer>
-
+    
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="envelope.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>  
     <script src="https://kit.fontawesome.com/cc865c9a75.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    
 </body>
 </html>
