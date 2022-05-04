@@ -24,16 +24,25 @@
     font-size: 45px;
     text-align: center;
     color: var(--font);
-    margin-bottom: 30px;
-    margin-top: 40px
+    margin-bottom: 20px;
 }
 
 .section-4 .card {
-    background: var(--bg-section);
+     /* background: var(--bg-section); */
     box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
     text-align: center;
     position: relative;
+    margin-bottom: 40px;
+}
+
+.section-4 .card.even {
+    background-color: var(--bg-card-even);
+    color: #FFFF;
+}
+
+.section-4 .card.odd {
+    background-color: var(--bg-card-odd);
 }
 
 .section-4 .card.dark::before {
@@ -56,7 +65,7 @@
 
 .section-4 .profile-picture {
     margin-top: 20px;
-    padding: 30px;
+    padding: 20px;
 }
 
 .section-4 .card .info h4 {
@@ -80,7 +89,7 @@
 }
 
 .section-4 .card .mail {
-    background-color: var(--bg-mail);
+    /* background-color: var(--bg-mail); */
     padding: 9px 45px;
     border-radius: 10px;
     font-size: 14px;
@@ -92,12 +101,26 @@
     margin-bottom: 20px;
 }
 
+.section-4 .card .mail.odd {
+    background-color: var(--bg-mail-odd);
+    background-image: var(--bg-mail-odd);
+}
+
+.section-4 .card .mail.even {
+    background-color: var(--bg-mail-even);
+    background-image: var(--bg-mail-even);
+}
+
 .section-4 .card .social-media {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.section-4 .card .social-media i {
-    color: var(--icon);
+.section-4 .card.odd .social-media i {
+    color: var(--icon-odd);
+}
+
+.section-4 .card.even .social-media i {
+    color: var(--icon-even);
 }

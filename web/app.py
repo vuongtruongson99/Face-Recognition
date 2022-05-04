@@ -144,7 +144,7 @@ def image():
 
 @app.route('/teams')
 def teams():
-    return render_template("4th_section.html", percent=0)   
+    return render_template("4th_section.html")   
 
 if __name__ == '__main__':
     app.run(debug=True)
