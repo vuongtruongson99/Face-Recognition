@@ -1,5 +1,6 @@
 from time import sleep
 from flask import Flask, render_template, Response, flash, request, url_for, redirect
+from flask_mail import Mail, Message
 import cv2
 import numpy as np
 from keras.preprocessing.image import img_to_array
@@ -7,6 +8,8 @@ from tensorflow.keras.models import model_from_json, load_model
 from tensorflow.keras.preprocessing import image
 import imutils
 import os
+
+import config as config
 
 model = load_model("epoch_15.hdf5")
 detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -17,6 +20,20 @@ UPLOAD_FOLDER = 'static/uploads/'
 EMOTIONS = ["angry", "scared", "happy", "sad", "surprised", "neutral"]
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = "secret key"
+
+
+   
+# configuration of mail
+app.config['MAIL_SERVER']='smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USERNAME'] = config.MAIL_USERNAME
+
+# use the app password created 
+app.config['MAIL_PASSWORD'] = config.MAIL_PASSWORD
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+
+mail = Mail(app)
 
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
@@ -124,7 +141,24 @@ def upload_image():
     else:
         flash('Allowed image types are - png, jpg, jpeg, gif')
         return redirect(request.url)
+
+@app.route('/contact', methods=['POST'])
+def send_mail():
+    #getting the html inputs and referencing them
+    name = request.form['name']
+    email = request.form['email']
+    recipients = app.config['MAIL_USERNAME'] 
+    content = "Name:" + name + "\nEmail:" + email + "\nContent:" + request.form['content']
+    subject = "Mail from web"
     
+    # inputing the message in the correct order
+    msg = Message(subject, sender=email, recipients = [recipients] )
+    msg.body = content
+    mail.send(msg)
+    flash("Почта успешно отправлена")
+    return redirect(url_for("contact"))
+
+
 @app.route('/display/<filename>')
 def display_image(filename):
     print('display_image filename: ' + filename)
@@ -145,6 +179,10 @@ def image():
 @app.route('/teams')
 def teams():
     return render_template("4th_section.html")   
+
+@app.route('/contact')
+def contact():
+    return render_template("5th_section.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
